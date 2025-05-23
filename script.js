@@ -241,6 +241,25 @@ gsap.to(".heading2", {
     if (cards[i]) cards[i].classList.remove('hidden');
   }
 
+ const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
 
+    menuBtn.addEventListener('click', () => {
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        menu.classList.add('flex', 'opacity-0', '-translate-y-5');
+        setTimeout(() => {
+          menu.classList.remove('opacity-0', '-translate-y-5');
+          menu.classList.add('opacity-100', 'translate-y-0');
+        }, 10);
+      } else {
+        menu.classList.remove('opacity-100', 'translate-y-0');
+        menu.classList.add('opacity-0', '-translate-y-5');
+        setTimeout(() => {
+          menu.classList.remove('flex');
+          menu.classList.add('hidden');
+        }, 300);
+      }
+    });
 
   

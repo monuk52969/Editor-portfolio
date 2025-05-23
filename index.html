@@ -41,24 +41,35 @@
   <div class="main w-fullh-screen">
 
   <!-- Navbar -->
-  <div
-    class="navbar w-full h-16 bg-transparent sticky top-0 z-50 px-4 md:px-8 py-2 flex flex-wrap justify-between items-center">
-    <div class="logo text-[#EDFF66] text-lg md:text-xl font-bold flex items-center">
-      Tapish.
-      <button
-        class="relative py-2 px-8 ml-10 text-black text-base font-bold nded-full overflow-hidden bg-white rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-yellow-300 before:to-blue-200 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
-        HOVER ME!
-      </button>
+  <!-- Navbar -->
+  <nav class="w-full sticky top-0 z-50 bg-transparent px-4 md:px-8 py-2">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo + Button -->
+      <div class="flex items-center text-[#EDFF66] text-lg md:text-xl font-bold">
+        Tapish.
+        <button
+          class="relative py-2 px-6 ml-6 text-black text-sm md:text-base font-bold rounded-full overflow-hidden bg-white transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-yellow-300 before:to-blue-200 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0">
+          HOVER ME!
+        </button>
+      </div>
 
+      <!-- Hamburger Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-white text-3xl focus:outline-none">
+          ☰
+        </button>
+      </div>
     </div>
 
-    <div class="links flex flex-wrap gap-4 md:gap-6 text-white mt-2 md:mt-0 text-sm md:text-base">
+    <!-- Mobile Menu -->
+    <div id="menu"
+      class="hidden flex-col md:flex md:flex-row md:items-center md:justify-end gap-4 md:gap-6 text-white text-sm md:text-base mt-4 md:mt-0 md:static absolute left-0 w-full bg-black md:bg-transparent px-4 md:px-0 py-4 md:py-0 transition-all duration-500 ease-in-out transform md:translate-y-0">
       <a href="#" class="hover:border-b-2 hover:border-[#EDFF66] transition duration-300 pb-1">Home</a>
       <a href="#" class="hover:border-b-2 hover:border-[#EDFF66] transition duration-300 pb-1">Works</a>
       <a href="#" class="hover:border-b-2 hover:border-[#EDFF66] transition duration-300 pb-1">Services</a>
-      <a href="#" class="hover:border-b-2 hover:border-[#EDFF66]  transition duration-300 pb-1">Contact</a>
+      <a href="#" class="hover:border-b-2 hover:border-[#EDFF66] transition duration-300 pb-1">Contact</a>
     </div>
-  </div>
+  </nav
 
   <!-- Hero Text (on top of canvas) -->
   <div class="hero-text relative z-30 w-full h-screen">
@@ -82,6 +93,8 @@
 
 
   </div>
+
+
 
 
   <!-- Canvas for frame animation -->
